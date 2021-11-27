@@ -1,5 +1,7 @@
 streamlit
 tensorflow-cpu
-keras
-keras_applications
-keras_vggface
+mtcnn==0.1.0
+tensorflow_cpu
+keras==2.4.3
+keras-vggface==0.6
+keras_applications==1.0.8

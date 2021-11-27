@@ -1,4 +1,4 @@
-from keras.engine.topology import get_source_inputs
+
 from keras_vggface.utils import preprocess_input
 from keras_vggface.vggface import VGGFace
 import pickle
@@ -12,8 +12,8 @@ import numpy as np
 
 detector = MTCNN()
 model = VGGFace(model='resnet50',include_top=False,input_shape=(224,224,3),pooling='avg')
-feature_list = pickle.load(open('ext_feat.pkl','rb'))
-filenames = pickle.load(open('filename.pkl','rb'))
+feature_list = pickle.load(open('ext_feat1.pkl','rb'))
+filenames = pickle.load(open('filename1.pkl','rb'))
 
 def save_uploaded_image(uploaded_image):
     try:
