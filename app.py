@@ -1,14 +1,14 @@
-
-from keras_vggface.utils import preprocess_input
-from keras_vggface.vggface import VGGFace
+import os
 import pickle
-from sklearn.metrics.pairwise import cosine_similarity
+
+import cv2
+import numpy as np
 import streamlit as st
 from PIL import Image
-import os
-import cv2
+from keras_vggface.utils import preprocess_input
+from keras_vggface.vggface import VGGFace
 from mtcnn import MTCNN
-import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
 
 detector = MTCNN()
 model = VGGFace(model='resnet50',include_top=False,input_shape=(224,224,3),pooling='avg')
